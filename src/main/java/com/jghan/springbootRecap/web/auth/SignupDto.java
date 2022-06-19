@@ -1,4 +1,4 @@
-package dto.auth;
+package com.jghan.springbootRecap.web.auth;
 
 import com.jghan.springbootRecap.domain.user.User;
 import lombok.Data;
