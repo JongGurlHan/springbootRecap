@@ -32,6 +32,20 @@
           <a class="nav-link disabled">Disabled</a>
         </li>
 
+        <li class="nav-item" th:if="${dto.user}">
+          <a href="/user/modify" th:href="@{/user/modify}" class="nav-link" th:text="*{username}">유저네임</a>
+          <span>dfasfdsafasfsadfsad</span>
+        </li>
+
+
+      </ul>
+
+      <ul class="navbar-nav ml-auto" th:object="${dto.user}">
+        <li class="nav-item" th:if="${dto.user}">
+          <a href="/user/modify" th:href="@{/user/modify}" class="nav-link" th:text="*{username}">유저네임</a>
+          <span>dfasfdsafasfsadfsad</span>
+        </li>
+
       </ul>
 
     </div>
