@@ -21,6 +21,7 @@ public class UserService {
         UserProfileDto dto = new UserProfileDto();
 
         User userEntity = userRepository.findById(principalId).orElseThrow();
+        dto.setUser(userEntity);
 
         return dto;
 

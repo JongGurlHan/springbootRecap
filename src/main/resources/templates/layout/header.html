@@ -33,7 +33,7 @@
         </li>
 
         <li class="nav-item" th:if="${dto.user}">
-          <a href="/user/modify" th:href="@{/user/modify}" class="nav-link" th:text="*{username}">유저네임</a>
+          <a href="/user/modify" th:href="@{/user/profile}" class="nav-link" th:text="*{username}">유저네임</a>
           <span>dfasfdsafasfsadfsad</span>
         </li>
 
@@ -42,8 +42,7 @@
 
       <ul class="navbar-nav ml-auto" th:object="${dto.user}">
         <li class="nav-item" th:if="${dto.user}">
-          <a href="/user/modify" th:href="@{/user/modify}" class="nav-link" th:text="*{username}">유저네임</a>
-          <span>dfasfdsafasfsadfsad</span>
+          <a href="/user/modify" th:href="@{|/user/${#authentication.principal.user.id}|}" class="nav-link" th:text="|안녕하세요 *{username} 님|">유저네임</a>
         </li>
 
       </ul>
